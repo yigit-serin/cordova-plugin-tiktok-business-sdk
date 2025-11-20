@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-tiktok-business-sdk"
+        version="0.0.1">
+
+    <name>TikTok Business SDK</name>
+    <description>A community-developed Cordova plugin that wraps TikTok Business SDK 1.5.0 for Android and iOS</description>
+    <license>MIT</license>
+    <keywords>cordova,tiktok,business,sdk,analytics,tracking</keywords>
+    <author>Community Contributors</author>
+    <repo>https://github.com/yigit-serin/cordova-plugin-tiktok-business-sdk.git</repo>
+    <issue>https://github.com/yigit-serin/cordova-plugin-tiktok-business-sdk/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0"/>
+        <engine name="cordova-android" version=">=9.0.0"/>
+        <engine name="cordova-ios" version=">=6.0.0"/>
+    </engines>
+
+    <!-- JavaScript Interface -->
+    <js-module src="www/TikTokBusinessSdk.js" name="TikTokBusinessSdk">
+        <clobbers target="TikTokBusinessSdk" />
+    </js-module>
+
+    <!-- Android Configuration -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TikTokBusinessSdk">
+                <param name="android-package" value="com.tiktok.cordova.TikTokBusinessSdkPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <source-file src="src/android/TikTokBusinessSdkPlugin.java" target-dir="src/com/tiktok/cordova"/>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+    </platform>
+
+    <!-- iOS Configuration -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="TikTokBusinessSdk">
+                <param name="ios-package" value="TikTokBusinessSdkPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
+            <string>We need your permission to track your usage of this app for analytics and advertising purposes</string>
+        </config-file>
+
+        <header-file src="src/ios/TikTokBusinessSdkPlugin.h" />
+        <source-file src="src/ios/TikTokBusinessSdkPlugin.m" />
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="TikTokBusinessSDK" spec="~> 1.5.0" />
+            </pods>
+        </podspec>
+
+        <preference name="TIKTOK_SDK_VERSION" default="1.5.0" />
+    </platform>
+
+</plugin>
