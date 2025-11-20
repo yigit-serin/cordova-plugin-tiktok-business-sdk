@@ -306,8 +306,8 @@ Potential future features:
 
 ## 📚 Official Resources
 
-- [TikTok Business Android SDK](https://github.com/bytedance/tiktok-business-android-sdk)
-- [TikTok Business iOS SDK](https://github.com/bytedance/tiktok-business-ios-sdk)
+- [TikTok Business Android SDK](https://github.com/tiktok/tiktok-business-android-sdk)
+- [TikTok Business iOS SDK](https://github.com/tiktok/tiktok-business-ios-sdk)
 - [TikTok Business API Documentation](https://business-api.tiktok.com/portal/docs)
 
 ---

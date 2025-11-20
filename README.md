@@ -2,7 +2,7 @@
 
 A community-developed Cordova plugin that provides easy integration with TikTok Business SDK 1.5.0 for Android and iOS platforms.
 
-> **Note**: This plugin is not officially maintained by TikTok. It is a community-driven wrapper around the official [TikTok Business Android SDK](https://github.com/bytedance/tiktok-business-android-sdk) and [TikTok Business iOS SDK](https://github.com/bytedance/tiktok-business-ios-sdk) for use in Cordova/PhoneGap applications.
+> **Note**: This plugin is not officially maintained by TikTok. It is a community-driven wrapper around the official [TikTok Business Android SDK](https://github.com/tiktok/tiktok-business-android-sdk) and [TikTok Business iOS SDK](https://github.com/tiktok/tiktok-business-ios-sdk) for use in Cordova/PhoneGap applications.
 
 ## Features
 
@@ -450,7 +450,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [existing issues](https://github.com/your-repo/cordova-plugin-tiktok-business-sdk/issues)
+1. Check the [existing issues](https://github.com/yigit-serin/cordova-plugin-tiktok-business-sdk/issues)
 2. Create a new issue with detailed information
 3. Include your Cordova version, platform, and error logs
 
@@ -470,8 +470,8 @@ If you encounter any issues or have questions:
 This plugin is an independent, community-maintained project and is **not officially affiliated with, endorsed by, or supported by TikTok or ByteDance**. It serves as a wrapper around the official TikTok Business SDK native libraries to enable their use in Cordova applications.
 
 For official TikTok Business SDK support and documentation, please refer to:
-- [TikTok Business Android SDK](https://github.com/bytedance/tiktok-business-android-sdk)
-- [TikTok Business iOS SDK](https://github.com/bytedance/tiktok-business-ios-sdk)
+- [TikTok Business Android SDK](https://github.com/tiktok/tiktok-business-android-sdk)
+- [TikTok Business iOS SDK](https://github.com/tiktok/tiktok-business-ios-sdk)
 - [TikTok Business API Documentation](https://business-api.tiktok.com/portal/docs)
 
 ## Acknowledgments

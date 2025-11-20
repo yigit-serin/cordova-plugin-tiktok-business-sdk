@@ -332,7 +332,7 @@ If you encounter issues during installation:
 
 1. Check this troubleshooting guide
 2. Review the [main README](README.md)
-3. Check [existing issues](https://github.com/your-repo/cordova-plugin-tiktok-business-sdk/issues)
+3. Check [existing issues](https://github.com/yigit-serin/cordova-plugin-tiktok-business-sdk/issues)
 4. Create a new issue with:
    - Installation command used
    - Error messages
