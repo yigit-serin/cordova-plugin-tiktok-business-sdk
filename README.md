@@ -24,7 +24,7 @@ A community-developed Cordova plugin that provides easy integration with TikTok 
 ## Installation
 
 ```bash
-cordova plugin add cordova-plugin-tiktok-business-sdk
+cordova plugin add https://github.com/yigit-serin/cordova-plugin-tiktok-business-sdk
 ```
 
 Or install from local directory:
