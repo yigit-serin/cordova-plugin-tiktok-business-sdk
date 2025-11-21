@@ -3,7 +3,6 @@ package com.tiktok.cordova;
 import android.content.Context;
 import com.tiktok.TikTokBusinessSdk;
 import com.tiktok.appevents.base.EventName;
-import com.tiktok.appevents.TTAppEvent;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -193,11 +192,11 @@ public class TikTokBusinessSdkPlugin extends CordovaPlugin {
                 return;
             }
 
-            // Create TTAppEvent with custom properties
-            TTAppEvent customEvent = new TTAppEvent(eventName);
+            // Create properties object with custom properties
+            JSONObject props = new JSONObject();
             
             if (eventId != null && !eventId.isEmpty()) {
-                customEvent.addProperty("event_id", eventId);
+                props.put("event_id", eventId);
             }
 
             // Add custom properties
@@ -206,11 +205,11 @@ public class TikTokBusinessSdkPlugin extends CordovaPlugin {
                 while (keys.hasNext()) {
                     String key = keys.next();
                     Object value = properties.get(key);
-                    customEvent.addProperty(key, value);
+                    props.put(key, value);
                 }
             }
 
-            TikTokBusinessSdk.trackEvent(customEvent);
+            TikTokBusinessSdk.trackEvent(eventName, props);
             callbackContext.success("Event with custom data tracked successfully");
 
         } catch (JSONException e) {
